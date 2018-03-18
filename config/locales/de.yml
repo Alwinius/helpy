@@ -4,6 +4,7 @@ de:
   language_name: 'Deutsch' # The name of the translation file, in that language
   root: &root 'Home'
   how_can_we_help: "Wie können wir helfen?"
+  message_placeholder: "Bitte nenne uns auch deine Zimmernummer und wann du für eine Reparatur oder Einrichtung Zeit hast."
   browse_topics: "Themen durchsuchen"
   support_team: "Support Team"
   nothing_here: "Noch nichts hier!"

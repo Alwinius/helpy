@@ -8,8 +8,8 @@ services:
     volumes:
       - rails-assets:/helpy/public
     env_file: docker/.env
-    #environment:
-    #  - DO_NOT_PREPARE=true
+    environment:
+      - DO_NOT_PREPARE=true
     depends_on:
       - postgres
     ports:
