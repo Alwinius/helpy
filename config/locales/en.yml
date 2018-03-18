@@ -4,7 +4,7 @@ en:
   language_name: 'English' # The name of the translation file, in that language
   root: &root 'Home'
   how_can_we_help: "How can we help?"
-  message_placeholder: "Please also include your room number and when you're available for repair or setup."
+  message_placeholder: "Please also include your building and room number and when you're available for repair or setup."
   browse_topics: "Browse Knowledgebase"
   support_team: "Support Team"
   nothing_here: "Nothing here yet!"
