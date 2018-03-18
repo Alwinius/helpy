@@ -16,7 +16,7 @@
       <%= simple_format(@topic.posts.last.body) %>
     </p>
     <p>
-      <%= t('to_reply', default: 'Reply directly to this email or view this online:') %> <%= admin_topic_url(@topic, host: AppSettings['settings.site_url']) %>
+      <%= t('to_reply', default: 'Reply directly to this email or view this online:') %> <a href="<%= admin_topic_url(@topic, host: AppSettings['settings.site_url']) %>">Link</a>
     </p>
   </body>
 </html>

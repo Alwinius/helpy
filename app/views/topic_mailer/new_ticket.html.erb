@@ -28,7 +28,7 @@
   </p>
   <%= render :partial => 'posts/thumbnail', locals: { :model_name => @topic.posts.last } %>
   <p>
-    <%= t('view_online', default: 'View this online:') %> <a href="<%= ticket_url(@topic, host: AppSettings['settings.site_url']) %>"><%= ticket_url(@topic, host: AppSettings['settings.site_url']) %></a>
+    <%= t('to_reply', default: 'Reply directly to this email or view this online:') %> <a href="<%= ticket_url(@topic, host: AppSettings['settings.site_url']) %>">Link</a>
   </p>
   <br/>
   <p>
