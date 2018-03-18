@@ -24,7 +24,7 @@
     <%= f.input :name, :size => 40,  placeholder: I18n.t(:subject), label: I18n.t(:subject), class: 'disable-empty topic-placeholder' %>
 
     <%= f.simple_fields_for :posts do |p| %>
-      <%= p.input :body, input_html: {:rows => 8, :cols => 60, placeholder: I18n.t(:how_can_we_help), label: 'Message', class: 'disable-empty form-control topic-placeholder'} %>
+      <%= p.input :body, input_html: {:rows => 8, :cols => 60, placeholder: I18n.t(:how_can_we_help), value: t(:new_ticket_msg_placeholder, default: 'Please include your building and room/apartment no. and when you are available'), class: 'disable-empty form-control topic-placeholder'} %>
     <% end %>
 
     <%= hidden_field_tag :client_id %>

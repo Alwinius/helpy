@@ -4,7 +4,7 @@ ENV HELPY_VERSION=master \
     RAILS_ENV=production \
     HELPY_HOME=/helpy \
     HELPY_USER=helpyuser \
-    HELPY_SLACK_INTEGRATION_ENABLED=true
+    HELPY_SLACK_INTEGRATION_ENABLED=false
 
 RUN apt-get update \
   && apt-get upgrade -y \
@@ -17,12 +17,13 @@ RUN apt-get update \
 WORKDIR $HELPY_HOME
 
 USER $HELPY_USER
+COPY --chown=helpyuser ./ ./
 
-RUN git clone --branch $HELPY_VERSION --depth=1 https://github.com/helpyio/helpy.git .
+#RUN git clone --branch $HELPY_VERSION --depth=1 https://github.com/helpyio/helpy.git .
 
 # add the slack integration gem to the Gemfile if the HELPY_SLACK_INTEGRATION_ENABLED is true
 # use `test` for sh compatibility, also use only one `=`. also for sh compatibility
-RUN test "$HELPY_SLACK_INTEGRATION_ENABLED" = "true" && sed -i '128i\gem "helpy_slack", git: "https://github.com/helpyio/helpy_slack.git", branch: "master"' $HELPY_HOME/Gemfile
+#RUN ls -l && test "$HELPY_SLACK_INTEGRATION_ENABLED" = "true" && sed -i '128i\gem "helpy_slack", git: "https://github.com/helpyio/helpy_slack.git", branch: "master"' $HELPY_HOME/Gemfile
 
 RUN bundle install
 
